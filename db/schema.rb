@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_16_192326) do
+ActiveRecord::Schema.define(version: 2021_05_16_200643) do
 
   create_table "user_data", force: :cascade do |t|
     t.string "name"
     t.float "age"
-    t.string "type"
+    t.string "workout_type"
     t.string "duration"
     t.string "intensity"
     t.datetime "created_at", precision: 6, null: false
