@@ -1,0 +1,2 @@
+module WorkoutRecommenderHelper
+end

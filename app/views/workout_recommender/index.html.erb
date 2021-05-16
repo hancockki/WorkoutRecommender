@@ -1,0 +1,13 @@
+<h1>Welcome to the workout recommender!</h1>
+
+<%= form_tag do%>
+    <p> Your Name: <%= text_field_tag(:nameInput) %> </p>
+    <p> Your Age: <%= text_field_tag(:ageInput) %> </p>
+    <p> Desired Type of Workout: <%= text_field_tag(:workout_typeInput) %> </p>
+    <p> Duration of Workout: <%= text_field_tag(:durationInput) %> </p>
+    <p> Intensity Level: <%= text_field_tag(:intensityInput) %> </p>
+    <p> <%= submit_tag "Enter Info"%> </p>
+<% end %>
+
+
+<p>Find me in app/views/workout_recommender/index.html.erb</p>
