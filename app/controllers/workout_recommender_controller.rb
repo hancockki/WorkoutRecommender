@@ -14,7 +14,7 @@ class WorkoutRecommenderController < ApplicationController
     respond_to do |format|
       if newRow.save
         puts "Success!"
-        format.html {redirect_to workout_recommender_url}
+        format.html {redirect_to workout_recommender_results_url}
       else
         format.html {redirect_to "/"} #Can create an error page
       end
