@@ -14,7 +14,8 @@ class WorkoutRecommenderController < ApplicationController
     respond_to do |format|
       if newRow.save
         puts "Success!"
-        format.html {redirect_to workout_recommender_url}
+        #take the user input and map it to entries in the library database in some new function
+        format.html {redirect_to workout_recommender_results_url} #redirect to results
       else
         format.html {redirect_to "/"} #Can create an error page
       end
@@ -22,7 +23,9 @@ class WorkoutRecommenderController < ApplicationController
   end
 
 
+
   def results
+    #map results
   end
 
 

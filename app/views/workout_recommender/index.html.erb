@@ -3,11 +3,13 @@
 <%= form_tag do%>
     <p> Your Name: <%= text_field_tag(:nameInput) %> </p>
     <p> Your Age: <%= text_field_tag(:ageInput) %> </p>
+    <p> Choose from the following: Yoga, Running, Ab Workout, HIIT, Strength Training, Stretching, Pilates </p>
     <p> Desired Type of Workout: <%= text_field_tag(:workout_typeInput) %> </p>
+    <p> Choose from the following: 15 minutes, 30 minutes, 45 minutes, 1 hour </p>
     <p> Duration of Workout: <%= text_field_tag(:durationInput) %> </p>
+    <p> Choose from the following: Low/Beginner, Medium/Intermediate, High/Advanced </p>
     <p> Intensity Level: <%= text_field_tag(:intensityInput) %> </p>
     <p> <%= submit_tag "Enter Info"%> </p>
 <% end %>
-
 
 <p>Find me in app/views/workout_recommender/index.html.erb</p>
