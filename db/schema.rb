@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2021_05_16_200643) do
 
+  create_table "library", id: false, force: :cascade do |t|
+    t.text "name", null: false
+    t.text "link", null: false
+    t.text "type", null: false
+    t.text "duration", null: false
+    t.text "intensity", null: false
+  end
+
   create_table "user_data", force: :cascade do |t|
     t.string "name"
     t.float "age"
