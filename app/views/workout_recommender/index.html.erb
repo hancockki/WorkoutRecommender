@@ -12,5 +12,11 @@
     <p> <%= submit_tag "Enter Info"%> </p>
 <% end %>
 
-<p> <%= submit_tag "Click here to populate database"%> </p>
+<p> <% @returnedEntries.each do |url| %>
+   <p> <%= url.url %> </p>
+    <% end %>
+</p>
+<%= form_tag do%> 
+    <p>  <a href="/workout_recommender/dataentry">Click here to populate database</a> </p>
+<% end %>
 <p>Find me in app/views/workout_recommender/index.html.erb</p>

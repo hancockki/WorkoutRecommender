@@ -1,5 +1,19 @@
+'''
+TODO:
+
+  1) Clear Library and re-populate with all the entries
+  2) Figure out how to show the matched URL on the index home page
+  3) How to see the database in our terminal
+  4) How to clear Match after every time someone fills out the form
+  5) Better HTML formatting
+'''
+
+
+
+
 class WorkoutRecommenderController < ApplicationController
   def index
+    puts "IN INDEX"
     @returnedEntries = Match.all
   end
 
@@ -30,33 +44,24 @@ class WorkoutRecommenderController < ApplicationController
     duration = params[:durationInput]
     intensity = params[:intensityInput]
 
-   #for @allData.each do |format|:
-      #find the matches
-      #enter that match into a match table, which is a new table in the same database
-    #end
-    
+    results = Library.find_by workout_type: workout_type, duration: duration, intensity: intensity    
 
-    #map = {"name" => name, "age" => age, "workout_type" => workout_type, "duration"=>duration, "intensity"=>intensity}
-    #newRow = UserDatum.new(map)
+    map = {'url'=>results.url}
+    newRow = Match.new(map)
     respond_to do |format|
-      #if newRow.save
-        #puts "Success!"
+      if newRow.save
+        puts "Success!"
       format.html {redirect_to '/'} #redirect to results
-    #else
-    #format.html {redirect_to "/"} #Can create an error page
-      #end
+      else
+      format.html {redirect_to '/'} #Can create an error page
+      end
     end
   end
 
 
 
-  def GetResults(workout_type, duration, intensity)
-    puts workout_type, duration, intensity
-
-    @returnedEntries = UserDatum.connection.select_all("select * from library where type = '" + workout_type + \
-       "' and duration = '" + duration + "' and intensity = '" + intensity + "';")
-    puts "success"
-    return @returnedEntries
+  def DisplayResults
+    puts "INSIDE DISPLAY RESILTS!!!!!!!!!!!!!!!!!!!!!!"
 
   end
 
