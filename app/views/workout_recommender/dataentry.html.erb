@@ -1,0 +1,9 @@
+<h1>Enter data for workout ideas here!</h1>
+
+<%= form_tag do%>
+    <p> Type of Workout: <%= text_field_tag(:workout_typeInput) %> </p>
+    <p> Duration of Workout: <%= text_field_tag(:durationInput) %> </p>
+    <p> Intensity Level: <%= text_field_tag(:intensityInput) %> </p>
+    <p> URL for this new entry: <%= text_field_tag(:URLInput) %> </p>
+    <p> <%= submit_tag "Enter Info"%> </p>
+<% end %>
