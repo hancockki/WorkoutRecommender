@@ -1,8 +1,7 @@
-class CreateUserData < ActiveRecord::Migration[6.1]
+class CreateLibraries < ActiveRecord::Migration[6.1]
   def change
-    create_table :user_data do |t|
-      t.string :name
-      t.float :age
+    create_table :libraries do |t|
+      t.string :url
       t.string :workout_type
       t.string :duration
       t.string :intensity

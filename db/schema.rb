@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_16_200643) do
+ActiveRecord::Schema.define(version: 2021_05_21_141414) do
+
+  create_table "libraries", force: :cascade do |t|
+    t.string "url"
+    t.string "workout_type"
+    t.string "duration"
+    t.string "intensity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "library", id: false, force: :cascade do |t|
     t.text "name", null: false
@@ -20,12 +29,8 @@ ActiveRecord::Schema.define(version: 2021_05_16_200643) do
     t.text "intensity", null: false
   end
 
-  create_table "user_data", force: :cascade do |t|
-    t.string "name"
-    t.float "age"
-    t.string "workout_type"
-    t.string "duration"
-    t.string "intensity"
+  create_table "matches", force: :cascade do |t|
+    t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
