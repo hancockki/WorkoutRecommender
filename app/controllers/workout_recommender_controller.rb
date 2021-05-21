@@ -8,9 +8,6 @@ TODO:
   5) Better HTML formatting
 '''
 
-
-
-
 class WorkoutRecommenderController < ApplicationController
   def index
     puts "IN INDEX"
@@ -38,6 +35,7 @@ class WorkoutRecommenderController < ApplicationController
 
 
   def EnterInfo
+    Match.delete_all
     name = params[:nameInput]
     age = params[:ageInput].to_f
     workout_type = params[:workout_typeInput]
@@ -45,23 +43,48 @@ class WorkoutRecommenderController < ApplicationController
     intensity = params[:intensityInput]
 
     results = Library.find_by workout_type: workout_type, duration: duration, intensity: intensity    
-
-    map = {'url'=>results.url}
-    newRow = Match.new(map)
-    respond_to do |format|
-      if newRow.save
-        puts "Success!"
-      format.html {redirect_to '/'} #redirect to results
+    if results.present?
+      map = {'url'=>results.url}
+      newRow = Match.new(map)
+      respond_to do |format|
+        if newRow.save
+          puts "Success!"
+          format.html {redirect_to '/'} #redirect to results
+        end
+      end
+    else
+      results = Library.find_by workout_type: workout_type, intensity: intensity
+      if results.present?
+        map = {'url'=>results.url}
+        newRow = Match.new(map)
+        respond_to do |format|
+          if newRow.save
+            puts "Success!"
+            format.html {redirect_to '/'} #redirect to results
+          end
+        end
       else
-      format.html {redirect_to '/'} #Can create an error page
+        results = Library.find_by workout_type: workout_type
+        if results.present?
+          map = {'url'=>results.url}
+          newRow = Match.new(map)
+          respond_to do |format|
+            if newRow.save
+              puts "Success!"
+              format.html {redirect_to '/'} #redirect to results
+            end
+          end
+        else
+          respond_to do |format|
+          format.html {redirect_to '/'} #Can create an error page
+          end
+        end
       end
     end
   end
 
-
-
   def DisplayResults
-    puts "INSIDE DISPLAY RESILTS!!!!!!!!!!!!!!!!!!!!!!"
+    puts "INSIDE DISPLAY RESULTS!!!!!!!!!!!!!!!!!!!!!!"
 
   end
 
