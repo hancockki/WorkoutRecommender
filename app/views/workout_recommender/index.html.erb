@@ -13,7 +13,7 @@
 <% end %>
 
 <p> <% @returnedEntries.each do |url| %>
-   <p> <%= url.url %> </p>
+   <p> <a href=<%= url.url %>>Click here to see a recommended workout plan/video! </a></p>
     <% end %>
 </p>
 <%= form_tag do%> 
