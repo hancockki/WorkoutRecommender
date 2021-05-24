@@ -1,21 +1,27 @@
+<div class="middle">
+
+<div class="container" align-self-center>
+ 
+
 <h1>Welcome to the workout recommender!</h1>
 <%= form_tag do%>
-    <p> Your Name: <%= text_field_tag(:nameInput) %> </p>
-    <p> Your Age: <%= text_field_tag(:ageInput) %> </p>
-    <p> Choose from the following: Yoga, Running, Abs, HIIT, Strength Training, Stretching, Pilates </p>
-    <p> Desired Type of Workout: <%= text_field_tag(:workout_typeInput) %> </p>
-    <p> Choose from the following: 15 minutes, 20 minutes, 30 minutes, 45 minutes, 1 hour </p>
-    <p> Duration of Workout: <%= text_field_tag(:durationInput) %> </p>
-    <p> Choose from the following: Low, Medium, High </p>
-    <p> Intensity Level: <%= text_field_tag(:intensityInput) %> </p>
+    <b><p> Your Name: <%= text_field_tag(:nameInput) %> </p></b>
+    <b><p> Your Age: <%= text_field_tag(:ageInput) %> </p></b>
+    <i><p> Please choose from the following: Cardio, Yoga, Running, Ab Workout, HIIT, Strength Training, Stretching, Pilates </p></i>
+    <b> <p> Desired Type of Workout: <%= text_field_tag(:workout_typeInput) %> </p> </b>
+    <i><p> Please choose from the following: 15 minutes, 30 minutes, 45 minutes, 1 hour </p></i>
+    <b><p> Duration of Workout: <%= text_field_tag(:durationInput) %> </p></b>
+    <i><p> Please choose from the following: Low, Medium, High </p></i>
+    <b><p> Intensity Level: <%= text_field_tag(:intensityInput) %> </p></b>
     <p> <%= submit_tag "Enter Info"%> </p>
 <% end %>
 
-<p> <% @returnedEntries.each do |url| %>
-   <p> <a href=<%= url.url %>>Click here to see a recommended workout plan/video! </a></p>
-    <% end %>
-</p>
+
+<p> <a href='workout_recommender/DisplayResults'>Click here to see results</a></p>
+
+
 <%= form_tag do%> 
     <p>  <a href="/workout_recommender/dataentry">Click here to populate database</a> </p>
 <% end %>
-<p>Find me in app/views/workout_recommender/index.html.erb</p>
+</div>
+<div class="middle">

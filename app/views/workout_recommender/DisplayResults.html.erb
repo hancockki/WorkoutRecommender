@@ -1,0 +1,10 @@
+<p> Here is a link to a fun workout video/plan! </p>
+
+
+
+
+
+<p> <% @match.each do |url| %>
+  <p> <a href=<%= url.url %>>Click here to see a recommended workout plan/video! </a></p>
+    <% end %>
+</p>
