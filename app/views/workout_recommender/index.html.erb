@@ -1,10 +1,13 @@
 <div class="container">
- <div class="left">
-    <%= image_tag("tenor.gif", height: "400px")%>
-</div>
+<div class="row">
+    <div class="col-sm">
+    <%= image_tag("tenor.gif", height: "300px", width: "250px", id:"content")%>
+    </div>
 
-<div class="center">
+    <div class="col-1">
+    </div>
 
+<div class="col-5">
 <h1>Welcome to the workout recommender!</h1>
 <%= form_tag do%>
     <b><p> Your Name: <%= text_field_tag(:nameInput) %> </p></b>
@@ -26,8 +29,13 @@
     <p>  <a href="/workout_recommender/dataentry">Click here to populate database</a> </p>
 <% end %>
 </div>
-<div class="right">
-    <%= image_tag("treadmill.gif", height: "400px")%>
+
+<div class="col-1">
+</div>
+
+<div class="col-sm">
+    <%= image_tag("treadmill.gif", height: "300px", width: "300px")%>
+</div>
 </div>
 </div>
 

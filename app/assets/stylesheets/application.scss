@@ -13,17 +13,7 @@
  */
 
 @import "bootstrap";
-.middle{
-    margin-top: 5% !important;
-    width: 100%;
-    text-align: center;
-}
 
-.left{
-    margin-top: 5% !important;
-    width: 100%;
-    text-align: left;
-}
 
 h1 {
     text-align: center;
@@ -32,8 +22,31 @@ h1 {
     color: rgba(117, 193, 172, 1);
 }
 
-.container {
-    clear: both;
+.col-sm{
+    padding: 100px 0;
+    margin-top: 5% !important;
+    background-color: white;
+}
+
+.col-1{
+    display: inline-block;
+    width: 10px;
+    margin-top: 5% !important;
+}
+
+.col-5{
+    text-align: center;
+    background-color: white;
+    margin-top: 5% !important;
+}
+
+.container1 {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 100%;
+    margin-top: 5% !important;
+    text-align: center;
+    box-align: center;
 }
 
 i {
@@ -41,26 +54,5 @@ i {
 }
 
 body{
-    padding: 0;
-    margin: 0;
     background-image: url(/assets/success.jpg);
-}
-
-.left{ 
-    float: left; 
-    width: 33.333%; 
-    padding-right: 15%;
-    height: 500px;
-}
-.right{ 
-    float: right; 
-    width: 33.333%; 
-    padding-left: 10%;
-    height: 500px;
-}
-.center{ 
-    display: inline-block; 
-    width: 33.333%; 
-    margin-top: 5%;
-    height: 500px;
 }
