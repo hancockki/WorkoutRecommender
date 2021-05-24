@@ -12,4 +12,32 @@
  *
  */
 
- @import "bootstrap/scss/bootstrap";
+@import "bootstrap";
+.middle{
+    margin-top: 5% !important;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 300%;
+    color: rgba(117, 193, 172, 1);
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 100%;
+}
+
+i {
+    font-size: 85%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(/assets/success.jpg);
+}

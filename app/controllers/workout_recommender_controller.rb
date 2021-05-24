@@ -10,8 +10,9 @@ TODO:
 
 class WorkoutRecommenderController < ApplicationController
   def index
-    puts "IN INDEX"
+    #puts "IN INDEX"
     @returnedEntries = Match.all
+   # @receivedUserInput = False
   end
 
 
@@ -49,6 +50,7 @@ class WorkoutRecommenderController < ApplicationController
       respond_to do |format|
         if newRow.save
           puts "Success!"
+          #make changes to the visibility of results
           format.html {redirect_to '/'} #redirect to results
         end
       end

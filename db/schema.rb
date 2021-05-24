@@ -35,4 +35,14 @@ ActiveRecord::Schema.define(version: 2021_05_21_141414) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "user_data", force: :cascade do |t|
+    t.string "name"
+    t.float "age"
+    t.string "workout_type"
+    t.string "duration"
+    t.string "intensity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
 end
