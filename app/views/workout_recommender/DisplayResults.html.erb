@@ -1,10 +1,8 @@
+<div class="container" align:center>
 <p> Here is a link to a fun workout video/plan! </p>
-
-
-
-
-
+<%= image_tag "avocado-pushup.gif"%>
 <p> <% @match.each do |url| %>
   <p> <a href=<%= url.url %>>Click here to see a recommended workout plan/video! </a></p>
     <% end %>
 </p>
+</div>
