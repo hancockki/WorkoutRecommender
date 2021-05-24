@@ -10,7 +10,6 @@ TODO:
 
 class WorkoutRecommenderController < ApplicationController
   def index
-    puts "IN INDEX"
     @returnedEntries = Match.all
   end
 

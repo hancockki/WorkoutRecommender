@@ -1,5 +1,5 @@
 <p> Here are your results </p>
-<%= form_tag do%>
-    <p> <%= submit_tag "Click to see results"%> </p>
-    <%= @returnedEntries %>
-<% end %>
+<p> <% @returnedEntries.each do |url| %>
+   <p> <a href=<%= url.url %>>Click here to see a recommended workout plan/video! </a></p>
+    <% end %>
+</p>
