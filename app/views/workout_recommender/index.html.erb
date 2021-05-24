@@ -4,7 +4,6 @@
  
 
 <h1>Welcome to the workout recommender!</h1>
-
 <%= form_tag do%>
     <b><p> Your Name: <%= text_field_tag(:nameInput) %> </p></b>
     <b><p> Your Age: <%= text_field_tag(:ageInput) %> </p></b>
@@ -18,10 +17,7 @@
 <% end %>
 
 
-<p> <% @returnedEntries.each do |url| %>
-   <p> <a href=<%= url.url %>>Click here to see a recommended workout plan/video! </a></p>
-    <% end %>
-</p>
+<p> <a href='workout_recommender/DisplayResults'>Click here to see results</a></p>
 
 
 <%= form_tag do%> 

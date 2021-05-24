@@ -11,7 +11,7 @@ TODO:
 class WorkoutRecommenderController < ApplicationController
   def index
     #puts "IN INDEX"
-    @returnedEntries = Match.all
+    @match = Match.all
    # @receivedUserInput = False
   end
 
@@ -87,7 +87,7 @@ class WorkoutRecommenderController < ApplicationController
 
   def DisplayResults
     puts "INSIDE DISPLAY RESULTS!!!!!!!!!!!!!!!!!!!!!!"
-
+    @match = Match.all
   end
 
 
